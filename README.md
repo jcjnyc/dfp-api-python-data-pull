@@ -30,23 +30,7 @@ client = dfp.DfpClient(oauth2_client,'google_dfp_prod', network)
 
 dfp_param.py
 -------------
-[Order]
-dfpservice = OrderService
-dfpstmt = getOrdersByStatement
-#columns = 'advertiserId','id','name','traffickerId','secondaryTraffickerIds','salespersonId','totalClicksDelivered','totalImpressionsDelivered','startDateTime','endDateTime','lastModifiedDateTime','currencyCode','status'
-#columns = data['advertiserId']|data['id']|data['name'].encode('utf8')|data['traffickerId']|data.get('secondaryTraffickerIds','')|data.get('salespersonId','')|data['totalClicksDelivered']|data['totalImpressionsDelivered']|_ConvertDateFormat(data['startDateTime'])|_ConvertDateFormat(data.get('endDateTime',None))|_ConvertDateFormat(data['lastModifiedDateTime'])|data['currencyCode']|data['status']
-filename = order.output
-
-[Advertiser]
-dfpservice = CompanyService
-dfpstmt = getCompaniesByStatement
-columns = [a['id']]
-filename = advertiser.out
-
-[DEFAULT]
-API_VERSION = v201403
-page_size = 500
-offset = 0
+The program uses config parser. hence the dfp_param.py is laid out such that config parser can read it.
 
 
 dfp_api_generic.py
