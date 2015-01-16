@@ -1,7 +1,8 @@
 dfp-api-python-data-pull
 ========================
 
-Google data extract using Dfp Api python using a generic framework
+Google data extract using Dfp Api python using a GENERIC framework. 
+Use the other script (exec_dfp.py) to download data from required api's.
 
 Prelim setup:
 --------------
